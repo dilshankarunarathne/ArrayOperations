@@ -24,22 +24,33 @@ class arrayOperations {
 	}
 	
 	// Implement the method to search a specific number from the array
-	public static void Search() {
-		// Code here.....
+	public static void Search(int [] array, int number) {
+		for (int i=0; i<array.length; i++) {
+			if (array [i] == number) {
+				System.out.println ("Found number " + number + " at index " + i);
+			}
+		}
+		System.out.println ("Number " + number + " was not found in the array.") ;
 	}
 	
 	// Implement the method to find the maximum number from the array
-	public static void Maximum() {
-		// Code here.....
+	public static void Maximum(int [] array) {
+		int max = array [0] ;
+		for (int i=1; i<array.length; i++) {
+			if (max < array [i]) {
+				max = array [i] ;
+			}
+		}
+		System.out.println ("Maximum number in the array is " + max) ;
 	}
 	
 	// Implement the method to find the minimum number from the array
-	public static void Minimum() {
+	public static void Minimum(int [] array) {
 		// Code here.....
 	}
 	
 	// Implement the method to retrieve a number at specific index
-	public static void getElement() {
+	public static int getElement(int [] array, int index) {
 		// Code here.....
 	}
 	
