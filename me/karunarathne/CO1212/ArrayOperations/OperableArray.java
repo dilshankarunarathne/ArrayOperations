@@ -1,20 +1,32 @@
 package me.karunarathne.CO1212.ArrayOperations;
 
-public class ArrayOperations implements Operations {
-    // Implement the method to insert the numbers into the array
-    // (Get the numbers from the user.)
-    public static void fillArray() {
+public class OperableArray implements Operations {
+    int [] baseArray ;
+    int length ;
 
+    public OperableArray (String inputString) {
+        String [] arr = inputString.split(" ");
+        length = arr.length ;
+        baseArray = new int [length] ;
+        for (int i=0; i<length; i++) {
+            baseArray [i] = Integer.parseInt(arr [i]) ;
+        }
     }
 
     // Implement the method to display the numbers of the array
-    public static void printArray() {
-
+    public void printArray() {
+        for (int i=0; i<length; i++) {
+            System.out.print (baseArray [i] + " "); ;
+        }
+        System.out.println () ;
     }
 
     // Implement the method to display the numbers reversely
-    public static void printReverse() {
-
+    public void printReverse() {
+        for (int i=length-1; i>=0; i++) {
+            System.out.print (baseArray [i] + " "); ;
+        }
+        System.out.println () ;
     }
 
     // Implement the method to search a specific number from the array
@@ -44,10 +56,6 @@ public class ArrayOperations implements Operations {
 
     // Implement the method to sort the array in ascending order
     public static void sortArrayASC() {
-
-    }
-
-    public static void Delete() {
 
     }
 }

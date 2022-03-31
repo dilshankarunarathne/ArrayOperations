@@ -1,10 +1,6 @@
 package me.karunarathne.CO1212.ArrayOperations;
 
 public interface Operations {
-    // Implement the method to insert the numbers into the array
-    // (Get the numbers from the user.)
-    public static void fillArray() {}
-
     // Implement the method to display the numbers of the array
     public static void printArray() {}
 
@@ -28,6 +24,4 @@ public interface Operations {
 
     // Implement the method to sort the array in ascending order
     public static void sortArrayASC() {}
-
-    public static void Delete() {}
 }
