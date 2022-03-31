@@ -3,10 +3,6 @@ Download this two java files and implement the methods which are mentioned insid
 the class. Just use the basic things that I have taught you in the lectures.  
 In the next lectures you will be asked to share and explain the codes.
 
-## What I did...
-I implemented the methods ~ ***La Basica*** in the original file. But I also created a seperate 
-package containing another implementation, which is **good**. 
-
 ## Interface to implement
 
 
@@ -63,6 +59,7 @@ package containing another implementation, which is **good**.
 ## Tests
 
     import java.util.Scanner;
+
     class arrayOperationsMain {
         public static void main(String args[]) {
             Scanner sc = new Scanner(System.in);
@@ -76,3 +73,7 @@ package containing another implementation, which is **good**.
             // Call the methods here......
         }
     }
+
+## What I did...
+I implemented the methods ~ ***La Basica*** in the original file. But I also created a seperate
+package containing another implementation, which is **good**. 
