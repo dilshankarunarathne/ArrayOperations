@@ -1,8 +1,7 @@
 import java.util.Scanner;
-class arrayOperationsMain
-{
-	public static void main(String args[])
-	{
+
+class arrayOperationsMain {
+	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		arrayOperations op = new arrayOperations();
 		
