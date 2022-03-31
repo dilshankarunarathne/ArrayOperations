@@ -8,8 +8,8 @@ class arrayOperationsMain {
 		System.out.println("Enter the size of the array");
 		int size = sc.nextInt();
 		
-		int array[] = new int[size];
-		
+		int [] array = new int[size];
+
 		// Call the methods here......
 	}
 }

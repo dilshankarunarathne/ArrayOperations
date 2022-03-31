@@ -2,13 +2,18 @@ import java.util.Scanner;
 
 class arrayOperations {
 	// Implement the method to insert the numbers into the array (Get the numbers from the user.)
-	public static void fillArray() {
-		// Code here.....
+	public static void fillArray(int [] array) {
+		Scanner scanner = new Scanner(System.in) ;
+		for (int i=0; i<array.length; i++) {
+			array [i] = scanner.nextInt() ;
+		}
 	}
 	
 	// Implement the method to display the numbers of the array
-	public static void printArray() {
-		// Code here.....
+	public static void printArray(int [] array) {
+		for (int i=0; i<array.length; i++) {
+			System.out.print (array [i] + " ") ;
+		}
 	}
 	
 	// Implement the method to display the numbers reversely

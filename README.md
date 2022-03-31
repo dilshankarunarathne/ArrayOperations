@@ -4,7 +4,7 @@ the class. Just use the basic things that I have taught you in the lectures.
 In the next lectures you will be asked to share and explain the codes.
 
 ## What I did...
-I implemented the methods in ***La Basica*** in the original file. But I also created a seperate 
+I implemented the methods ~ ***La Basica*** in the original file. But I also created a seperate 
 package containing another implementation, which is **good**. 
 
 ## Interface to implement
