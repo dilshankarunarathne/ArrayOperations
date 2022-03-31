@@ -46,11 +46,17 @@ class arrayOperations {
 	
 	// Implement the method to find the minimum number from the array
 	public static void Minimum(int [] array) {
-		// Code here.....
+		int min = array [0] ;
+		for (int i=1; i<array.length; i++) {
+			if (min > array [i]) {
+				min = array [i] ;
+			}
+		}
+		System.out.println ("Minimum number in the array is " + min) ;
 	}
 	
 	// Implement the method to retrieve a number at specific index
-	public static int getElement(int [] array, int index) {
+	public static void getElement(int [] array, int index) {
 		// Code here.....
 	}
 	
