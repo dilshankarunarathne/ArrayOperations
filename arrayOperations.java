@@ -57,7 +57,7 @@ class arrayOperations {
 	
 	// Implement the method to retrieve a number at specific index
 	public static void getElement(int [] array, int index) {
-		// Code here.....
+		System.out.println ("Element at " + index + " is " + array [index]) ;
 	}
 	
 	// Implement the method to replace a number at specific index
