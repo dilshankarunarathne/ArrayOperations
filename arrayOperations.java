@@ -17,8 +17,10 @@ class arrayOperations {
 	}
 	
 	// Implement the method to display the numbers reversely
-	public static void printReverse() {
-		// Code here.....
+	public static void printReverse(int [] array) {
+		for (int i=array.length-1; i<0; i--) {
+			System.out.print (array [i] + " ") ;
+		}
 	}
 	
 	// Implement the method to search a specific number from the array
