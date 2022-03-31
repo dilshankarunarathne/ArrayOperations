@@ -4,6 +4,7 @@ class arrayOperations {
 	// Implement the method to insert the numbers into the array (Get the numbers from the user.)
 	public static void fillArray(int [] array) {
 		Scanner scanner = new Scanner(System.in) ;
+		System.out.println ("Type all " + array.length + " integers seperated by spaces.") ;
 		for (int i=0; i<array.length; i++) {
 			array [i] = scanner.nextInt() ;
 		}
@@ -68,11 +69,28 @@ class arrayOperations {
 	}
 	
 	// Implement the method to sort the array in ascending order
-	public static void sortArrayASC() {
-		// Code here.....
+	public static void sortArrayASC(int [] array) {
+		int [] sortedArray = new int [array.length] ;
+		for (int i=0; i<array.length; i++) {
+			int currentMin = array [i] ;
+			for (int j=i+1; j<array.length; j++) {
+				if (array [j] < currentMin) {
+					currentMin = array [j] ;
+				}
+			}
+			sortedArray [i] = currentMin ;
+		}
+
+		System.out.println ("Sorted array [ASC] :") ;
+		for (int i=0; i<array.length; i++) {
+			System.out.print (sortedArray [i] + " ") ;
+		}
 	}
-	
-	public static void Delete() {
-		// Code here.....
+
+	// Implement the method to delete (set to zero) all the elements in the array
+	public static void Delete(int [] array) {
+		for (int i=0; i<array.length; i++) {
+			array [i] = 0 ;
+		}
 	}
 }
