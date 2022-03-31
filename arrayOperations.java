@@ -61,8 +61,10 @@ class arrayOperations {
 	}
 	
 	// Implement the method to replace a number at specific index
-	public static void replaceElement() {
-		// Code here.....
+	public static void replaceElement(int [] array, int index, int replaceWith) {
+		System.out.print ("Element at " + index + ": " + array [index]) ;
+		array [index] = replaceWith ;
+		System.out.print (" was replaced with " + replaceWith + "\n") ;
 	}
 	
 	// Implement the method to sort the array in ascending order
