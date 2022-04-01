@@ -67,25 +67,6 @@ class arrayOperations {
 		array [index] = replaceWith ;
 		System.out.print (" was replaced with " + replaceWith + "\n") ;
 	}
-	
-	// Implement the method to sort the array in ascending order
-/*	public static void sortArrayASC(int [] array) {
-		int [] sortedArray = new int [array.length] ;
-		for (int i=0; i<array.length; i++) {
-			int currentMin = array [i] ;
-			for (int j=i+1; j<array.length; j++) {
-				if (array [j] < currentMin) {
-					currentMin = array [j] ;
-				}
-			}
-			sortedArray [i] = currentMin ;
-		}
-
-		System.out.println ("Sorted array [ASC] :") ;
-		for (int i=0; i<array.length; i++) {
-			System.out.print (sortedArray [i] + " ") ;
-		}
-	} */
 
 	// Implement the method to sort the array in ascending order
 	public static void sortArrayASC(int [] array) {
