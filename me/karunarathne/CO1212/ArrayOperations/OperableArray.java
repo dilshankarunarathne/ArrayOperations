@@ -6,6 +6,11 @@ public class OperableArray implements Operations {
 
     private int pointer ;
 
+    /**
+     * Instantiates an OperableArray with all elements passed in as a single
+     * String with elements seperated by spaces.
+     * @param inputString       all elements of the array as a String
+     */
     public OperableArray (String inputString) {
         String [] arr = inputString.split(" ");
         size = arr.length ;
@@ -15,6 +20,10 @@ public class OperableArray implements Operations {
         }
     }
 
+    /**
+     * Instantiates an OperableArray with the given size.
+     * @param size      size of the OperableArray
+     */
     public OperableArray (int size) {
         this.size = size ;
         baseArray = new int [size] ;
@@ -26,7 +35,7 @@ public class OperableArray implements Operations {
      * This method can only be used if the array was initialized with a size.
      * In other words, this can only be used if the object was instantiated
      * with public OperableArray (int size) constructor.
-     * @param element
+     * @param element       integer to add
      */
     public void addElement (int element) {
         if (element>size) throw new IndexOutOfBoundsException("out of array bounds") ;
