@@ -26,7 +26,9 @@ public class OperableArray implements Operations {
         baseArray [pointer] = element ;
     }
 
-    // Implement the method to display the numbers of the array
+    /**
+     * Prints the array in the original order
+     */
     public void printArray() {
         for (int i = 0; i< size; i++) {
             System.out.print (baseArray [i] + " ");
