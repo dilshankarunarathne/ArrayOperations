@@ -59,7 +59,10 @@ public class OperableArray implements Operations {
         return max ;
     }
 
-    // Implement the method to find the minimum number from the array
+    /**
+     * Retrieves the smallest integer within the array
+     * @return      min
+     */
     public int Minimum() {
         int min = baseArray [0] ;
         for (int i = 0; i< size; i++) {
@@ -68,14 +71,17 @@ public class OperableArray implements Operations {
         return min ;
     }
 
-    // Implement the method to retrieve a number at specific index
+    /**
+     * Retrieves the element at a specific index
+     * @param index     index to retrieve the element
+     * @return          the element at the specified index
+     */
     public int getElement(int index) {
        return baseArray [index] ;
     }
 
     /**
-     * Used to replace
-     *
+     * Used to replace an element in a given index to a specified integer
      * @param index         index to replace the element from
      * @param replaceWith   replace the element with this
      */
@@ -84,7 +90,7 @@ public class OperableArray implements Operations {
     }
 
     /**
-     * sorts the array in the ascending order
+     * Sorts the array in the ascending order
      */
     public void sortArrayASC() {
         for (int i=0; i<baseArray.length; i++) {
