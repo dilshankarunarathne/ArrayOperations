@@ -42,7 +42,13 @@ public class OperableArray implements Operations {
         System.out.println () ;
     }
 
-    // Implement the method to search a specific number from the array
+    /**
+     * Search if a specified integer exists within an array.
+     * If found, this method returns the index where the element was found first.
+     * If the element was not found, returns -1
+     * @param number        integer to search (search key)
+     * @return              the index of that element
+     */
     public int Search(int number) {
         for (int i = 0; i< size; i++) {
             if (baseArray [i] == number) return i;
@@ -50,7 +56,10 @@ public class OperableArray implements Operations {
         return -1 ;
     }
 
-    // Implement the method to find the maximum number from the array
+    /**
+     * Retrieves the largest integer within the array
+     * @return      max
+     */
     public int Maximum() {
         int max = baseArray [0] ;
         for (int i = 0; i< size; i++) {
