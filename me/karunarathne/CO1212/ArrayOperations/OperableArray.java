@@ -21,6 +21,13 @@ public class OperableArray implements Operations {
         pointer = 0 ;
     }
 
+    /**
+     * Adds an element to the array, at index where the pointer is.
+     * This method can only be used if the array was initialized with a size.
+     * In other words, this can only be used if the object was instantiated
+     * with public OperableArray (int size) constructor.
+     * @param element
+     */
     public void addElement (int element) {
         if (element>size) throw new IndexOutOfBoundsException("out of array bounds") ;
         baseArray [pointer] = element ;
