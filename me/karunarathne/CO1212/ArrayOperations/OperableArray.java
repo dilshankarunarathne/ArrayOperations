@@ -34,7 +34,9 @@ public class OperableArray implements Operations {
         System.out.println () ;
     }
 
-    // Implement the method to display the numbers reversely
+    /**
+     * Prints the array in reverse order
+     */
     public void printReverse() {
         for (int i = size -1; i>=0; i--) {
             System.out.print (baseArray [i] + " ");
