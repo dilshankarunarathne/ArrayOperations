@@ -2,7 +2,7 @@ package me.karunarathne.CO1212.ArrayOperations;
 
 public class OperableArray implements Operations {
     private int [] baseArray ;
-    private int size;
+    private final int size;
 
     private int pointer ;
 
@@ -124,7 +124,7 @@ public class OperableArray implements Operations {
     public void sortArrayASC() {
         for (int i=0; i<baseArray.length; i++) {
             int currentMinIndex = i ;
-            for (int j=i+1; j<baseArray.length; j++) {
+            for (int j=i+1; j<baseArray.length-1; j++) {
                 if (baseArray [j] < baseArray [currentMinIndex]) {
                     currentMinIndex = j ;
                 }
