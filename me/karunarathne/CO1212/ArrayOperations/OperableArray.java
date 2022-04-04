@@ -1,21 +1,34 @@
 package me.karunarathne.CO1212.ArrayOperations;
 
 public class OperableArray implements Operations {
-    int [] baseArray ;
-    int length ;
+    private int [] baseArray ;
+    private int size;
+
+    private int pointer ;
 
     public OperableArray (String inputString) {
         String [] arr = inputString.split(" ");
-        length = arr.length ;
-        baseArray = new int [length] ;
-        for (int i=0; i<length; i++) {
+        size = arr.length ;
+        baseArray = new int [size] ;
+        for (int i = 0; i< size; i++) {
             baseArray [i] = Integer.parseInt(arr [i]) ;
         }
     }
 
+    public OperableArray (int size) {
+        this.size = size ;
+        baseArray = new int [size] ;
+        pointer = 0 ;
+    }
+
+    public void addElement (int element) {
+        if (element>size) throw new IndexOutOfBoundsException("out of array bounds") ;
+        baseArray [pointer] = element ;
+    }
+
     // Implement the method to display the numbers of the array
     public void printArray() {
-        for (int i=0; i<length; i++) {
+        for (int i = 0; i< size; i++) {
             System.out.print (baseArray [i] + " ");
         }
         System.out.println () ;
@@ -23,7 +36,7 @@ public class OperableArray implements Operations {
 
     // Implement the method to display the numbers reversely
     public void printReverse() {
-        for (int i=length-1; i>=0; i--) {
+        for (int i = size -1; i>=0; i--) {
             System.out.print (baseArray [i] + " ");
         }
         System.out.println () ;
@@ -31,7 +44,7 @@ public class OperableArray implements Operations {
 
     // Implement the method to search a specific number from the array
     public int Search(int number) {
-        for (int i=0; i<length; i++) {
+        for (int i = 0; i< size; i++) {
             if (baseArray [i] == number) return i;
         }
         return -1 ;
@@ -40,7 +53,7 @@ public class OperableArray implements Operations {
     // Implement the method to find the maximum number from the array
     public int Maximum() {
         int max = baseArray [0] ;
-        for (int i=0; i<length; i++) {
+        for (int i = 0; i< size; i++) {
             if (baseArray [i] > max) max = baseArray [i] ;
         }
         return max ;
@@ -49,7 +62,7 @@ public class OperableArray implements Operations {
     // Implement the method to find the minimum number from the array
     public int Minimum() {
         int min = baseArray [0] ;
-        for (int i=0; i<length; i++) {
+        for (int i = 0; i< size; i++) {
             if (baseArray [i] < min) min = baseArray [i] ;
         }
         return min ;
@@ -60,23 +73,31 @@ public class OperableArray implements Operations {
        return baseArray [index] ;
     }
 
-    // Implement the method to replace a number at specific index
+    /**
+     * Used to replace
+     *
+     * @param index         index to replace the element from
+     * @param replaceWith   replace the element with this
+     */
     public void replaceElement(int index, int replaceWith) {
         baseArray [index] = replaceWith ;
     }
 
-    // Implement the method to sort the array in ascending order
+    /**
+     * sorts the array in the ascending order
+     */
     public void sortArrayASC() {
-        int [] sortedArray = new int [length] ;
-        for (int i=0; i<length; i++) {
-            int currentMin = baseArray [i] ;
-            for (int j=i+1; j<length; j++) {
-                if (baseArray [j] < currentMin) {
-                    currentMin = baseArray [j] ;
+        for (int i=0; i<baseArray.length; i++) {
+            int currentMinIndex = i ;
+            for (int j=i+1; j<baseArray.length; j++) {
+                if (baseArray [j] < baseArray [currentMinIndex]) {
+                    currentMinIndex = j ;
                 }
             }
-            sortedArray [i] = currentMin ;
+
+            int temp = baseArray [i] ;
+            baseArray [i] = baseArray [currentMinIndex] ;
+            baseArray [currentMinIndex] = temp ;
         }
-        baseArray = sortedArray ;
     }
 }
